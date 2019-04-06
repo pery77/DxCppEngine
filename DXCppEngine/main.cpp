@@ -11,19 +11,25 @@ int main()
 	printf("Init application.\n");
 	try
 	{
-		AppWindow app;
-		if (app.isRun()) printf("Application is runing.\n");
+		AppWindow * app = new AppWindow();
+		if (app->isRun()) printf("Application is runing.\n");
 		
-		while (app.isRun())
+		while (app->isRun())
 		{
-			app.broadcast();
+			app->broadcast();
 		}
-		
+		delete app;
 	}
 	catch ( const std::runtime_error& err)
 	{
 		printf("Application fail.\n");
 	}
+	
+	printf("Program end.\n");
+
+#ifdef DEBUG 
+	system("pause");
+#endif
 
 	return 0;
 }

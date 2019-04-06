@@ -2,7 +2,7 @@
 
 void AppWindow::onCreate()
 {
-	printf("Window created\n");
+	printf("AppWindow onCreate\n");
 	Window::onCreate();
 	//Graphics::get()->init();
 }
@@ -14,6 +14,7 @@ void AppWindow::onUpdate()
 
 void AppWindow::onDestroy()
 {
+	printf("AppWindow onDestroy.\n");
 	Window::onDestroy();
 	//Graphics::get()->release();
 }

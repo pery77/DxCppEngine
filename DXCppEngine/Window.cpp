@@ -87,6 +87,7 @@ bool Window::isRun()
 
 void Window::onCreate()
 {
+	printf("Window onCreate.\n");
 }
 
 void Window::onUpdate()
@@ -95,12 +96,13 @@ void Window::onUpdate()
 
 void Window::onDestroy()
 {
+	printf("Window onDestroy.\n");
 	m_is_run = false;
 }
 
-
 Window::~Window()
 {
+	printf("Destoy window.\n");
 	DestroyWindow(m_hwnd);
 }
 
@@ -110,6 +112,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	{
 	case WM_CREATE:
 	{
+		printf("WM CREATE\n");
 		// Event fired when the window is created
 		// collected here..
 		auto* const params = reinterpret_cast<LPCREATESTRUCT>(lparam);
@@ -124,6 +127,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	case WM_DESTROY:
 	{
+		printf("WM DESTROY\n");
 		// Event fired when the window is destroyed
 		auto* const window =
 			reinterpret_cast<Window* const>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
@@ -131,7 +135,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		PostQuitMessage(0);
 		break;
 	}
-
 
 	default:
 		return DefWindowProc(hwnd, msg, wparam, lparam);
