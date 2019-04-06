@@ -1,6 +1,0 @@
-﻿  AppWindow.cpp
-  Window.cpp
-  main.cpp
-g:\_gits\dxcppengine\dxcppengine\main.cpp(23): warning C4101: 'err': unreferenced local variable
-  Generating Code...
-  DXCppEngine.vcxproj -> G:\_Gits\DxCppEngine\x64\Debug\DXCppEngine.exe

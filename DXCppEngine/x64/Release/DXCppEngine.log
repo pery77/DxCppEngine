@@ -1,9 +1,0 @@
-﻿  AppWindow.cpp
-  Graphics.cpp
-  main.cpp
-  Generating code
-  9 of 31 functions (29.0%) were compiled, the rest were copied from previous compilation.
-    7 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  DXCppEngine.vcxproj -> G:\_Gits\DxCppEngine\x64\Release\DXCppEngine.exe
